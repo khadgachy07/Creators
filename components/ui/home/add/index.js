@@ -1,7 +1,62 @@
+import { Button } from "@components/ui/common";
+
 export default function AddCreators() {
-    return(
-        <>
-        </>
-    )
-    
+  return (
+    <>
+      <form className="w-full max-w-lg">
+        <div>
+        <h3 className="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">Adding Creators</h3>
+        </div>
+        <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+            <label
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="grid-age"
+            >
+              Age
+            </label>
+            <input
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="grid-age"
+              type="number"
+              placeholder="25"
+            />
+          </div>
+          <div className="w-full md:w-1/2 px-3">
+            <label
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="grid-last-name"
+            >
+              Name
+            </label>
+            <input
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="grid-name"
+              type="text"
+              placeholder="Kurt Cobain"
+            />
+          </div>
+        </div>
+        <div className="flex flex-wrap -mx-3 mb-6">
+          <div className="w-full px-3">
+            <label
+              className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+              htmlFor="grid-contact-address"
+            >
+              Contact Address
+            </label>
+            <input
+              className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              id="grid-contact-address"
+              type="email"
+              placeholder="xyz@gmail.com"
+            />
+          </div>
+        </div>
+        <div>
+            <Button>Add Creator</Button>
+        </div>
+      </form>
+    </>
+  );
 }

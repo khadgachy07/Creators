@@ -1,4 +1,5 @@
 import Link from "next/link";
+import {Button} from "@components/ui/common";
 
 export default function NavBar() {
   return (
@@ -26,12 +27,7 @@ export default function NavBar() {
               </Link>
             </div>
             <div>
-              <a
-                href="#"
-                className="font-medium mr-8 text-indigo-600 hover:text-indigo-500"
-              >
-                Connect
-              </a>
+            <Button >Connect</Button>
             </div>
           </div>
         </nav>
