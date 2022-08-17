@@ -1,8 +1,12 @@
 import Link from "next/link";
 import {Button} from "@components/ui/common";
+import { useWeb3 } from "@components/providers";
 
 export default function NavBar() {
+  const {connect, isWeb3Loaded} = useWeb3()
+
   return (
+
     <section>
       <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
         <nav className="relative" aria-label="Global">
@@ -27,7 +31,15 @@ export default function NavBar() {
               </Link>
             </div>
             <div>
-            <Button >Connect</Button>
+              {
+                isWeb3Loaded? <Button onClick={connect} >Connect</Button> :
+                <Button
+                  onClick={() => window.open("https://metamask.io/", "_blank")}
+                >
+                  Install Metamask
+                </Button>
+              }
+            
             </div>
           </div>
         </nav>
