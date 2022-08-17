@@ -1,13 +1,16 @@
 import Link from "next/link";
 import {Button} from "@components/ui/common";
 import { useWeb3 } from "@components/providers";
+import { useAccount } from "@components/web3/hooks/useAccount";
 
 export default function NavBar() {
-  const {connect, isWeb3Loaded} = useWeb3()
+  const {connect, isWeb3Loaded,hooks} = useWeb3()
+  const {account} = useAccount()
 
   return (
 
     <section>
+      {account}
       <div className="relative pt-6 px-4 sm:px-6 lg:px-8">
         <nav className="relative" aria-label="Global">
           <div className="flex justify-between lg:md-4">
@@ -33,6 +36,7 @@ export default function NavBar() {
             <div>
               {
                 isWeb3Loaded? <Button onClick={connect} >Connect</Button> :
+                
                 <Button
                   onClick={() => window.open("https://metamask.io/", "_blank")}
                 >
