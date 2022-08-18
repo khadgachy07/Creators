@@ -34,7 +34,7 @@ export default function NavBar() {
             </div>
             <div>
               {isWeb3Loaded ? (
-                account ? (
+                account.data ? (
                   <Button
                     hoverable={false}
                     className="cursor-default"

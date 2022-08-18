@@ -10,6 +10,8 @@
   },
   "dependencies": {
     "@metamask/detect-provider": "^1.2.0",
+    "@truffle/compile-solidity": "^6.0.40",
+    "@truffle/contract": "^4.5.22",
     "eslint-plugin-react-hooks": "^4.7.0-next-1e5245df8-20220817",
     "next": "12.2.5",
     "react": "18.2.0",
