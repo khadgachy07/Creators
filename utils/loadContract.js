@@ -11,8 +11,7 @@ export const loadContract = async (name, web3) => {
     contract = new web3.eth.Contract(
       Artifact.abi,
       Artifact.networks[NETWORK_ID].address
-    )
-    console.log(contract)
+    )  
   }catch{
     console.log(`Contract ${name} cannot be loaded`)
   }

@@ -63,6 +63,11 @@ contract StarterContract{
             Creators[i] = Creators[i+1];
         }
         Creators.pop();
+        
+        for (uint i = index; i < hashPerson.length - 1; i++){
+            hashPerson[i] = hashPerson[i+1];
+        }
+        hashPerson.pop();
     }
 
     function getPerson(string memory _name) public view onlyOwner checkBalance returns(Person memory){
