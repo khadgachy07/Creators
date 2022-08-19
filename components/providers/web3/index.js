@@ -1,5 +1,7 @@
 const { createContext, useContext, useEffect, useState, useMemo } = require("react");
+import { useAccount } from "@components/web3/hooks/useAccount";
 import detectEthereumProvider from "@metamask/detect-provider";
+
 import { loadContract } from "@utils/loadContract"; 
 import Web3 from "web3";
 import { setupHooks } from "./hooks/setupHooks";
@@ -7,6 +9,7 @@ import { setupHooks } from "./hooks/setupHooks";
 const Web3Context = createContext(null)
 
 export default function Web3Provider({children}){
+ 
     const [web3Api, setWeb3Api] = useState({
         provider: null,
         web3: null,
@@ -36,6 +39,7 @@ export default function Web3Provider({children}){
 
     const _web3Api = useMemo(() => {
         const {web3, provider} = web3Api
+        
         return {
           ...web3Api,
           getHooks: () => setupHooks(web3, provider),

@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
-pragma solidity >=0.4.22 <0.9.0;
-pragma experimental ABIEncoderV2;
+
+pragma solidity ^0.8.0;
 
 contract StarterContract{
 
@@ -20,7 +20,7 @@ contract StarterContract{
 
     mapping(string => Person) namePerson;
 
-    constructor() public{
+    constructor (){
         owner = msg.sender;
     }
 
@@ -54,7 +54,7 @@ contract StarterContract{
         return keccak256(abi.encode(_age, _name, _contactAddress));
     }
 
-    function getCretors() public view returns(Person[] memory){
+    function getCreators() public view returns(Person[] memory){
         return Creators;
     }
 

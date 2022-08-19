@@ -1,20 +1,24 @@
 import { useWeb3 } from "@components/providers";
 import { Button } from "@components/ui/common";
-import Card from "@components/ui/common/cards";
+
 import { useAccount } from "@components/web3/hooks/useAccount";
+import { useState } from "react";
 
 export default function List() {
   const { account } = useAccount();
   const { contract } = useWeb3();
 
-  const handleGetCreator = async() => {
+  const [results, setResults] = useState();
+
+  const handleGetCreator = async () => {
     try {
       if (account.data && contract) {
         const result = await contract.methods
-          .getCretors()
+          .getCreators()
           .call({ from: account.data });
-        console.log(result);
-        alert('Successfully got creators ')
+        setResults(result);
+
+        alert("Successfully got creators ");
       } else {
         alert("Please Connect to metamask");
       }
@@ -22,22 +26,28 @@ export default function List() {
       alert("Function failed");
     }
   };
-
   return (
     <div>
+      { results}
       <div>
         <h3 className="font-medium leading-tight text-3xl mt-0 mb-2 text-blue-600">
           Getting Creators
         </h3>
       </div>
       <div>
-            <Button onClick={handleGetCreator}>Get Creator</Button>
-        </div>
-        <div className= "flex flex-wrap -mx-3 my-6">
-            <ul>
-              <li>result[1].age</li>
+        <Button onClick={handleGetCreator}>Get Creator</Button>
+      </div>
+      <div className="flex flex-wrap -mx-3 my-6">
+        { results && 
+          results.map((result,index) => { 
+            <ul key={index}>
+              <li>Age : {result.age} </li>
+              <li>Name : {result.name} </li>
+              <li>Email : {result.contact_address} </li>
             </ul>
-        </div>
+          })
+        }
+      </div>
     </div>
   );
 }
