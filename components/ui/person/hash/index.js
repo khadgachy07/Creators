@@ -1,7 +1,41 @@
+import { useWeb3 } from "@components/providers";
 import { Button } from "@components/ui/common";
+import { useAccount } from "@components/web3/hooks/useAccount";
+import { useRef, useState } from "react";
 
 
 export default function Hash(){
+
+  const IndexRef = useRef()
+
+  const {account} = useAccount()
+  const {contract} = useWeb3()
+
+  const [hash, setHash] = useState()
+
+  const handleGetHash = async () => {
+    const index = IndexRef.current.value;
+
+    if (index) {
+      try {
+        
+        if (account.data && contract) {
+          const result = await contract.methods
+            .hashPerson(index)
+            .call({ from: account.data });
+          setHash(result);
+          alert('Successfully Got')
+        } else {
+          alert("Please Connect to metamask");
+        }
+      } catch (error) {
+        alert("Function failed");
+      }
+    } else {
+      alert("Please input the index");
+    }
+  }
+
     return (
         <div className="w-full max-w-lg">
         <div>
@@ -20,12 +54,17 @@ export default function Hash(){
               id="grid-index"
               type="number"
               placeholder="0"
+              ref={IndexRef}
+              required
             />
           </div>
           
         </div>
         <div>
-        <Button>Get Hash</Button>
+        <Button onClick={handleGetHash} >Get Hash</Button>
+        </div>
+        <div>
+          {hash}
         </div>
        
       </div>

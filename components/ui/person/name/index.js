@@ -4,11 +4,11 @@ import { useAccount } from "@components/web3/hooks/useAccount";
 import { useRef, useState } from "react";
 
 export default function Name() {
-  const[person, setPerson] = useState()
+  const [person, setPerson] = useState();
 
   const NameRef = useRef();
-  const {account} =useAccount()
-  const {contract} = useWeb3()
+  const { account } = useAccount();
+  const { contract } = useWeb3();
 
   const handleFind = async (e) => {
     let name = NameRef.current.value;
@@ -22,7 +22,7 @@ export default function Name() {
             .call({ from: account.data });
           alert("Successfully Got");
           console.log(result);
-          setPerson(result)
+          setPerson(result);
         } else {
           alert("Please Connect to metamask");
         }
@@ -61,16 +61,16 @@ export default function Name() {
       </div>
       <div>
         <Button onClick={handleFind}>Find</Button>
-        
       </div>
-      { person &&
+      {person && (
         <div>
-        <ul>
-          <li>Age: {person.age}</li>
-          <li>Name: {person.name}</li>
-          <li>Email: {person.contact_address}</li>
-        </ul>
-      </div>}
+          <ul>
+            <li>Age: {person.age}</li>
+            <li>Name: {person.name}</li>
+            <li>Email: {person.contact_address}</li>
+          </ul>
+        </div>
+      )}
     </div>
   );
 }
