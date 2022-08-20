@@ -2,7 +2,7 @@ import { useWeb3 } from "@components/providers";
 import { Button } from "@components/ui/common";
 
 import { useAccount } from "@components/web3/hooks/useAccount";
-import {  useState } from "react";
+import { useState } from "react";
 
 export default function List() {
   const { account } = useAccount();
@@ -17,7 +17,9 @@ export default function List() {
           .getCreators()
           .call({ from: account.data });
           setResults(result);
-        return result;
+          if (result.length == 0) {
+            alert('No any Creators found');
+          }
       } else {
         alert("Please Connect to metamask");
       }
@@ -25,8 +27,6 @@ export default function List() {
       alert("Function failed");
     }
   };
-
-  
 
   return (
     <div>
@@ -38,7 +38,7 @@ export default function List() {
       <div>
         <Button onClick={handleGetCreator}>Get Creator</Button>
       </div>
-      {results}
+      {results && results}
     </div>
   );
 }

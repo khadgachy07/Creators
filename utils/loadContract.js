@@ -12,6 +12,7 @@ export const loadContract = async (name, web3) => {
       Artifact.abi,
       Artifact.networks[NETWORK_ID].address
     )  
+    console.log(contract)
   }catch{
     console.log(`Contract ${name} cannot be loaded`)
   }

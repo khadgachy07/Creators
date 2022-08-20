@@ -14,7 +14,7 @@ contract StarterContract{
 
     bytes32[] public hashPerson;
 
-    Person[] Creators;
+    Person[] public Creators;
 
     mapping(bytes32 => Person) public personsHash;
 
