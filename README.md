@@ -41,11 +41,13 @@ Incase of metamask is not installed, 'Install Metamask' button will appeared ins
 
 ## Try on Local Machine
 
-If you want to try this dapp in your loacl machine.
+If you want to try this dapp in your loacl machine. (Assuming, you are familier with Truffle and Ganache)
 1. Clone this Repostiory in your machine.
 2. Open terminal inside a root folder of project.
 3. Run 'yarn' to install all dependencies required to run project in your machine.
 4. Run 'yarn dev' to run a project in LocalHost.
+5. Change the Network ID in .env.development to Ganache's network id.
+6. Change the network to LocalHost in your metamask also which should be connected to Ganache.
 
 ## Deployment 
 
