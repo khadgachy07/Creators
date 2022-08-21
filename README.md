@@ -1,34 +1,55 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Creator Dapp on Rinkeby Network
+Creator is a decentralized web application that allows user to store a person along with their 
+detail like Age, Name, Email in a Array that is present in blockchain. 
 
-First, run the development server:
+This dapp is current depolyer on Rinkeby Network. Truffle and Ganache was used to develop this
+application.
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Truffle is a world class development environment, testing framework and asset pipeline for 
+blockchains using the Ethereum Virtual Machine (EVM), aiming to make life as a developer easier.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Ganache s a personal blockchain for rapid Ethereum and Corda distributed application development. 
+You can use Ganache across the entire development cycle; enabling you to develop, deploy, and test 
+your dApps in a safe and deterministic environment.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+![Screenshot from 2022-08-21 22-59-25](https://user-images.githubusercontent.com/55689890/185802941-adde8655-8287-4a2f-a07b-2a47dad769a0.png)
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+User needs to connect to Metamask to perform.
+Incase of metamask is not installed, 'Install Metamask' button will appeared instead of 'Connect' button.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+![Screenshot from 2022-08-21 23-42-45](https://user-images.githubusercontent.com/55689890/185804531-419a6e55-b0ef-4b94-a13b-369b91c0e6dd.png)
 
-## Learn More
 
-To learn more about Next.js, take a look at the following resources:
+## Functionalities
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Add Creator : This function allows user to Add a creator with age, name and email into a Array.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+2. Remove Creator(Only Owner) : This function allows contract owner to remove a certain person using index value.
 
-## Deploy on Vercel
+3. Get Creator(Only Owner) : This function allows contract owner to get all creator stored in a Array.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Screenshot from 2022-08-21 23-00-34](https://user-images.githubusercontent.com/55689890/185805475-802fce32-17ee-4329-bab6-a3677edff8c4.png)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+4. Find By Name : This function allow user to find a Creator using a Name of a Creator.
+
+5. Get Hash : This function allow user to find a Hash(keccak256) of a Creator.
+
+6. Find by Hash : This function allow user to find a Creator using a Hash key.
+
+![Screenshot from 2022-08-21 23-00-42](https://user-images.githubusercontent.com/55689890/185805723-c9979d56-5e80-4155-8bb5-be20ccbfed1f.png)
+
+## Try on Local Machine
+
+If you want to try this dapp in your loacl machine.
+1. Clone this Repostiory in your machine.
+2. Open terminal inside a root folder of project.
+3. Run 'yarn' to install all dependencies required to run project in your machine.
+4. Run 'yarn dev' to run a project in LocalHost.
+
+## Deployment 
+
+This decentralized web application is deployed using a Vercel.
+Here is link: https://creators-ebon.vercel.app/
+
+
