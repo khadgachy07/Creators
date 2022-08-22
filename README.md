@@ -1,15 +1,15 @@
 
 ## Creator Dapp on Rinkeby Network
 Creator is a decentralized web application that allows user to store a person along with their 
-detail like Age, Name, Email in a Array that is present in blockchain. 
+details like Age, Name, Email in a Array that is present in blockchain. 
 
-This dapp is current depolyer on Rinkeby Network. Truffle and Ganache was used to develop this
+This dapp is currently depolyed on Rinkeby Network. Truffle and Ganache was used to develop this
 application.
 
 Truffle is a world class development environment, testing framework and asset pipeline for 
 blockchains using the Ethereum Virtual Machine (EVM), aiming to make life as a developer easier.
 
-Ganache s a personal blockchain for rapid Ethereum and Corda distributed application development. 
+Ganache is a personal blockchain for rapid Ethereum and Corda distributed application development. 
 You can use Ganache across the entire development cycle; enabling you to develop, deploy, and test 
 your dApps in a safe and deterministic environment.
 
