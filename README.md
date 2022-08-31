@@ -25,13 +25,13 @@ Incase of metamask is not installed, 'Install Metamask' button will appeared ins
 
 1. Add Creator : This function allows user to Add a creator with age, name and email into a Array.
 
-2. Remove Creator(Only Owner) : This function allows contract owner to remove a certain person using index value.
+2. Remove Creator(Only Owner) : This function allows user to remove a certain person using index value.
 
-3. Get Creator(Only Owner) : This function allows contract owner to get all creator stored in a Array.
+3. Get Creator : This function allows contract owner to get all creator stored in a Array.
 
 ![Screenshot from 2022-08-21 23-00-34](https://user-images.githubusercontent.com/55689890/185805475-802fce32-17ee-4329-bab6-a3677edff8c4.png)
 
-4. Find By Name : This function allow user to find a Creator using a Name of a Creator.
+4. Find By Name(Only Owner) : This function allow contract owner to find a Creator using a Name of a Creator.
 
 5. Get Hash : This function allow user to find a Hash(keccak256) of a Creator.
 
