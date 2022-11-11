@@ -1,5 +1,5 @@
 
-## Creator Dapp on Rinkeby Network
+## Creator Dapp on Goerli Network
 Creator is a decentralized web application that allows user to store a person along with their 
 details like Age, Name, Email in a Array that is present in blockchain. 
 
