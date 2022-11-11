@@ -62,7 +62,7 @@ export default function PersonHash() {
         <Button onClick={handleFindByHash}>Find</Button>
       </div>
       {person && (
-        <div>
+        <div className="bg-stone-200 h-auto min-h-min w-72 min-w-max m-1 p-1 rounded-tl-xl rounded-br-xl border-2 border-zinc-500 border-dashed">
           <ul>
             <li>Age: {person.age}</li>
             <li>Name: {person.name}</li>

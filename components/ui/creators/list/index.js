@@ -38,7 +38,19 @@ export default function List() {
       <div>
         <Button onClick={handleGetCreator}>Get Creator</Button>
       </div>
-      {results && results}
+      {results && results.map(
+        (creator,index) => {
+          return (
+            <div key={index} className="bg-stone-200 h-auto min-h-min w-72 min-w-max m-1 p-1 rounded-tl-xl rounded-br-xl border-2 border-zinc-500 border-dashed">
+              <ul>
+                <li>Age: {creator.age}</li>
+                <li>Name: {creator.name}</li>
+                <li>Email: {creator.contact_address}</li>
+              </ul>
+            </div>
+          )
+        }
+      )}
     </div>
   );
 }

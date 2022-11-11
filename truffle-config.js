@@ -1,5 +1,5 @@
 const HDWalletProvider = require('@truffle/hdwallet-provider')
-const keys = require("./keys.json")
+// const keys = require("./keys.json")
 
 module.exports = {
   contracts_build_directory: "./public/contracts",

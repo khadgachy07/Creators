@@ -27,7 +27,7 @@ export default function AddCreators(e) {
             .send({ from: account.data });
           console.log(result);
           alert("Successfully Added");
-          window.location.reload();
+          
         } else {
           alert("Please Connect to metamask");
         }
